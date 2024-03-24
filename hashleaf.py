@@ -125,8 +125,6 @@ def main_menu():
     | F |     
     
             MENU> ''')
-
-    # if, elif statements used for 
     
     if hash_menu == '1':
         dehasher(hash_menu)
@@ -139,5 +137,6 @@ def main_menu():
     else:
         print('Please select using numbers. ')
         main_menu()
+
 
 main_menu()
