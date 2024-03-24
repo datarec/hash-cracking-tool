@@ -6,6 +6,7 @@ import hashlib
 import os
 import time
 
+# function to clear the screen.
 
 def clean_display():
     OPERATING_SYSTEM = os.name
@@ -14,6 +15,7 @@ def clean_display():
     else:
         os.system('clear')
 
+# class that contains objects that are used throughout the script
 
 def dehasher(value):
     clean_display()
@@ -28,8 +30,13 @@ def dehasher(value):
             self.SHA512 = hashlib.sha512()
             self.SHA512_TITLE = 'SHA512' 
 
+    # stores the class inside of a namespace to access 
+    
     encryption = encryption_types()
 
+    # if value which is the hash_menu namespace from the main_menu function is equal to 
+    # the following string values then make METHOD_PLACEHOLDER equal to the string number selected from the main_menu
+    
     if value == '1':
         METHOD_PLACEHOLDER = encryption.SHA256_TITLE
     elif value == '2':
@@ -38,6 +45,8 @@ def dehasher(value):
         METHOD_PLACEHOLDER = encryption.SHA1_TITLE
     elif value == '4':
         METHOD_PLACEHOLDER = encryption.SHA512_TITLE
+
+    # input hash and use METHOD_PLACEHOLDER to tell the user which encryption mode they've selected. 
 
     HASH_INPUT = input(f'''
 
@@ -50,6 +59,8 @@ def dehasher(value):
                          
      {METHOD_PLACEHOLDER}> ''')
 
+    # if HASH_INPUT equal to '1' return to menu
+    
     if HASH_INPUT == '1':
         main_menu()
 
@@ -115,6 +126,8 @@ def main_menu():
     
             MENU> ''')
 
+    # if, elif statements used for 
+    
     if hash_menu == '1':
         dehasher(hash_menu)
     elif hash_menu == '2':
@@ -125,6 +138,6 @@ def main_menu():
         dehasher(hash_menu)
     else:
         print('Please select using numbers. ')
-  
+        main_menu()
 
 main_menu()
