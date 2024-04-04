@@ -9,6 +9,8 @@
 # Hashleaf
 Hash cracking tool written in python, works by encrypting the list of passwords and matching it with the users desired hash and returns results IF the password text file contains the plaintext version of the users hash.
 
+**NOTE** Only works for unsalted hashes. 
+
 # Why?
 Cool little project i built. This is the first project i've made that uses an actual implementation of classes in python, another thing i like about this algorithm is unlike the calculator and simple-hash-tool projects i made prior to making this. Now instead of making a function for each arithmetic operator I can keep it all within the same function by ustilising f-strings and if statements for the calculator. 
 
