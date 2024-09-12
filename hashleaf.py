@@ -1,4 +1,4 @@
-# # Hash matcher | 18/03/2024 | coolpancakes
+# # Hash matcher | 18/03/2024 | h0hr
 # Matches hashes. 
 
 
@@ -139,4 +139,5 @@ def main_menu():
         main_menu()
 
 
-main_menu()
+if __name__ == "__main__":
+    main_menu()
